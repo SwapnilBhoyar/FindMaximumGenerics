@@ -1,3 +1,8 @@
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
 public class TestMaximum<E extends Comparable<E>> {
     E firstValue, secondValue, thirdValue;
     TestMaximum(E firstValue, E secondValue, E thirdValue) {
@@ -21,5 +26,10 @@ public class TestMaximum<E extends Comparable<E>> {
             maxValue = thirdValue;
         }
         return maxValue;
+    }
+    public static <E extends Comparable<E>> E testMaximumMore(E... args) {
+        List<E> list = Arrays.asList(args);
+        Collections.sort(list);
+        return list.get(list.size() - 1);
     }
 }

@@ -53,4 +53,19 @@ public class FindMaximumTest {
         TestMaximum<String> testMaximumInteger = new TestMaximum<>("peach", "apple", "banana");
         Assertions.assertEquals("banana", testMaximumInteger.testMaximum());
     }
+
+    @Test
+    void giveMaxInteger() {
+        Assertions.assertEquals(60, testMaxObj.testMaximumMore(1, 10, 13, 17, 25, 43, 21, 56, 60));
+    }
+
+    @Test
+    void giveMaxFloat() {
+        Assertions.assertEquals(60.0F, testMaxObj.testMaximumMore(1.0F, 10.0F, 13.0F, 1.70F, 2.05F, 4.3F, 21.0F, 56.0F, 60.0F));
+    }
+
+    @Test
+    void  giveMaxString() {
+        Assertions.assertEquals("banana", testMaxObj.testMaximumMore("apple", "peach", "banana", "mango", "kiwi"));
+    }
 }
