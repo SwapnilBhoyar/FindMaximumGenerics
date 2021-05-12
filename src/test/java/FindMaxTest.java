@@ -23,16 +23,31 @@ public class FindMaxTest {
 
     @Test
     void ifFloatNumberOneIsMaxReturnTrue() {
-        Assertions.assertEquals(10.0, findMax.findFloatMaxNumber(10.0F, 5.0F, 2.5F));
+        Assertions.assertEquals(10.0F, findMax.findFloatMaxNumber(10.0F, 5.0F, 2.5F));
     }
 
     @Test
     void ifFloatNumberTwoIsMaxReturnTrue() {
-        Assertions.assertEquals(100, findMax.findFloatMaxNumber(5.0F, 10.0F, 2.5F));
+        Assertions.assertEquals(10.0F, findMax.findFloatMaxNumber(5.0F, 10.0F, 2.5F));
     }
 
     @Test
     void ifFloatNumberThreeIsMaxReturnTrue() {
-        Assertions.assertEquals(100, findMax.findFloatMaxNumber(2.5F, 5.0F, 10.0F));
+        Assertions.assertEquals(10.0F, findMax.findFloatMaxNumber(2.5F, 5.0F, 10.0F));
+    }
+
+    @Test
+    void ifStringOneIsMaxReturnTrue() {
+        Assertions.assertEquals("banana", findMax.findStringMaxNumber("banana", "apple", "peach"));
+    }
+
+    @Test
+    void ifStringTwoIsMaxReturnTrue() {
+        Assertions.assertEquals("banana", findMax.findStringMaxNumber("apple", "banana", "peach"));
+    }
+
+    @Test
+    void ifStringThreeIsMaxReturnTrue() {
+        Assertions.assertEquals("banana", findMax.findStringMaxNumber("peach", "apple", "banana"));
     }
 }

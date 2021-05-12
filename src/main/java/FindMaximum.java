@@ -20,4 +20,15 @@ public class FindMaximum {
         }
         return maxNumber;
     }
+
+    public String findStringMaxNumber(String stringOne, String stringTwo, String stringThree) {
+        String maxNumber = stringOne;
+        if (stringTwo.compareTo(maxNumber) > 0) {
+            maxNumber = stringTwo;
+        }
+        if (stringThree.compareTo(maxNumber) < 0) {
+            maxNumber = stringThree;
+        }
+        return maxNumber;
+    }
 }
