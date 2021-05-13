@@ -39,19 +39,19 @@ public class FindMaximumTest {
     }
     @Test
     void ifStringOneIsMaxReturnTrue() {
-        TestMaximum<String> testMaximumInteger = new TestMaximum<>("banana", "peach", "apple");
-        Assertions.assertEquals("banana", testMaximumInteger.testMaximum());
+        TestMaximum<String> testMaximumInteger = new TestMaximum<>("peach", "banana", "apple");
+        Assertions.assertEquals("peach", testMaximumInteger.testMaximum());
     }
 
     @Test
     void ifStringTwoIsMaxReturnTrue() {
-        TestMaximum<String> testMaximumInteger = new TestMaximum<>("apple", "banana", "peach");
-        Assertions.assertEquals("banana", testMaximumInteger.testMaximum());
+        TestMaximum<String> testMaximumInteger = new TestMaximum<>("apple", "peach", "banana");
+        Assertions.assertEquals("peach", testMaximumInteger.testMaximum());
     }
     @Test
     void ifStringThreeIsMaxReturnTrue() {
-        TestMaximum<String> testMaximumInteger = new TestMaximum<>("peach", "apple", "banana");
-        Assertions.assertEquals("banana", testMaximumInteger.testMaximum());
+        TestMaximum<String> testMaximumInteger = new TestMaximum<>("banana", "apple", "peach");
+        Assertions.assertEquals("peach", testMaximumInteger.testMaximum());
     }
 
     @Test
@@ -66,6 +66,6 @@ public class FindMaximumTest {
 
     @Test
     void  giveMaxString() {
-        Assertions.assertEquals("banana", testMaxObj.testMaximumMore("apple", "peach", "banana", "mango", "kiwi"));
+        Assertions.assertEquals("peach", testMaxObj.testMaximumMore("apple", "peach", "banana", "mango", "kiwi"));
     }
 }

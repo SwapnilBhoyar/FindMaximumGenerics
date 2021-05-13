@@ -5,6 +5,7 @@ import java.util.List;
 
 public class TestMaximum<E extends Comparable<E>> {
     E firstValue, secondValue, thirdValue;
+
     TestMaximum(E firstValue, E secondValue, E thirdValue) {
         this.firstValue = firstValue;
         this.secondValue = secondValue;
