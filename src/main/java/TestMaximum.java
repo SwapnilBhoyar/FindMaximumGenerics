@@ -33,4 +33,11 @@ public class TestMaximum<E extends Comparable<E>> {
         Collections.sort(list);
         return list.get(list.size() - 1);
     }
+
+    public static void main(String args[]) {
+        TestMaximum testMaximumObj = new TestMaximum();
+        System.out.println("Max: "+testMaximumObj.testMaximumMore(1, 10, 13, 17, 25, 43, 21, 56, 60));
+        System.out.println("Max: "+testMaximumObj.testMaximumMore(1.0F, 10.0F, 13.0F, 1.70F, 2.05F, 4.3F, 21.0F, 56.0F, 60.0F));
+        System.out.println("Max: "+testMaximumObj.testMaximumMore("apple", "peach", "banana", "mango", "kiwi"));
+    }
 }
